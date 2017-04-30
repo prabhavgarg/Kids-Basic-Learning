@@ -38,7 +38,7 @@ public class TestPapers extends AppCompatActivity {
         ImageView i1 = (ImageView)findViewById(R.id.question_image);
         EditText e1 = (EditText)findViewById(R.id.answer);
         Button b = (Button)findViewById(R.id.submit);
-        String string =e1.getText().toString();
+        String string =e1.getText().toString().trim();
         pageNumber++;
         if(pageNumber<30){
             m.setVisibility(View.INVISIBLE);
@@ -52,6 +52,10 @@ public class TestPapers extends AppCompatActivity {
         }
         else if(pageNumber==30)
         {
+            if(string.equals(answer[pageNumber-1]))
+            {
+                marks++;
+            }
             t1.setText("SCORE OUT OF 30 is:");
             i1.setVisibility(View.INVISIBLE);
             e1.setVisibility(View.INVISIBLE);
