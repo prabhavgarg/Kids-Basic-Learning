@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Learn</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="test_note">This is an objective exam to see how much you have learned so far. Please do not leave the test before
+        completing it, otherwise you will get zero marks. It will contain 30 objective questions. Press the button to start the test.
+    </string>
+    <string name="q_1">Q1. Write the name of Animal.</string>
+    <string name="q_2">Q2. Write the name of Animal.</string>
+    <string name="q_3">Q3. Write the name of Animal.</string>
+    <string name="q_4">Q4. Write the name of Bird.</string>
+    <string name="q_5">Q5. Write the name of Bird.</string>
+    <string name="q_6">Q6. Write the name of Bird.</string>
+    <string name="q_7">Q7. Write the name of Colour.</string>
+    <string name="q_8">Q8. Write the name of Colour.</string>
+    <string name="q_9">Q9. Write the name of Colour.</string>
+    <string name="q_10">Q10. Write the name of Flower.</string>
+    <string name="q_11">Q11. Write the name of Flower.</string>
+    <string name="q_12">Q12. Write the name of Flower.</string>
+    <string name="q_13">Q13. Write the name of Fruit.</string>
+    <string name="q_14">Q14. Write the name of Fruit.</string>
+    <string name="q_15">Q15. Write the name of Fruit.</string>
+    <string name="q_16">Q16. Write the name of Shape.</string>
+    <string name="q_17">Q17. Write the name of Shape.</string>
+    <string name="q_18">Q18. Write the name of Shape.</string>
+    <string name="q_19">Q19. Write the name of Planet.</string>
+    <string name="q_20">Q20. Write the name of Planet.</string>
+    <string name="q_21">Q21. Write the name of Planet.</string>
+    <string name="q_22">Q22. Write the name of Vegetable.</string>
+    <string name="q_23">Q23. Write the name of Vegetable.</string>
+    <string name="q_24">Q24. Write the name of Vegetable.</string>
+    <string name="q_25">Q25. Write the name of Animal.</string>
+    <string name="q_26">Q26. Write the name of Bird.</string>
+    <string name="q_27">Q27. Write the name of Flower.</string>
+    <string name="q_28">Q28. Write the name of Shape.</string>
+    <string name="q_29">Q29. Write the name of Planet.</string>
+    <string name="q_30">Q30. Write the name of Vegetable.</string>
+</resources>

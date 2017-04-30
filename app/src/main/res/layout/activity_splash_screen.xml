@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    android:background="#E8F5E9"
+    android:orientation="vertical">
+
+    <TextView
+        android:textColor="@android:color/background_dark"
+        android:fontFamily="serif"
+        android:textSize="35dp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/and"
+        android:textStyle="italic"
+        android:text="KIDS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/and"
+        android:textColor="@android:color/background_dark"
+        android:fontFamily="serif"
+        android:textSize="35dp"
+        android:layout_above="@+id/implement"
+        android:layout_centerHorizontal="true"
+        android:textStyle="italic"
+        android:text="LEARNING"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/implement"
+        android:textColor="@android:color/background_dark"
+        android:fontFamily="serif"
+        android:textSize="35dp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/image"
+        android:textStyle="italic"
+        android:text="APPLICATION"
+        android:layout_marginBottom="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+
+        android:id="@+id/image"
+        android:src="@drawable/icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="35dp" />
+
+    <TextView
+        android:textColor="@android:color/background_dark"
+        android:fontFamily="cursive"
+        android:textSize="35dp"
+        android:layout_marginBottom="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:textStyle="italic"
+        android:text="Developed By: Prabhav Garg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4" />
+
+</RelativeLayout>

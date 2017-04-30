@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context="com.example.boss.learn.Abc">
+
+
+    <ImageView
+        android:layout_margin="10dp"
+        android:id="@+id/alphabet_image"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:src="@drawable/cat" />
+
+    <TextView
+        android:layout_weight="1"
+        android:id="@+id/alphabet_name"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="CAT"
+        android:textColor="#000000"
+        android:textSize="55dp" />
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="30dp"
+            android:layout_weight="1"
+            android:background="#4CAF50"
+            android:onClick="onClickPrevious"
+            android:text="PREVIOUS"
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="30dp"
+            android:layout_weight="1"
+            android:background="#4CAF50"
+            android:onClick="onClickNext"
+            android:text="NEXT"
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
+    </LinearLayout>
+</LinearLayout>
