@@ -3,38 +3,40 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/relativelayout"
     android:visibility="visible"
     android:background="#E8F5E9"
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/textView1"
         android:textColor="@android:color/background_dark"
         android:fontFamily="serif"
         android:textSize="35dp"
         android:layout_centerHorizontal="true"
-        android:layout_above="@+id/and"
+        android:layout_above="@+id/textView2"
         android:textStyle="italic"
         android:text="KIDS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <TextView
-        android:id="@+id/and"
+        android:id="@+id/textView2"
         android:textColor="@android:color/background_dark"
         android:fontFamily="serif"
         android:textSize="35dp"
-        android:layout_above="@+id/implement"
+        android:layout_above="@+id/textView3"
         android:layout_centerHorizontal="true"
         android:textStyle="italic"
         android:text="LEARNING"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <TextView
-        android:id="@+id/implement"
+        android:id="@+id/textView3"
         android:textColor="@android:color/background_dark"
         android:fontFamily="serif"
         android:textSize="35dp"
         android:layout_centerHorizontal="true"
-        android:layout_above="@+id/image"
+        android:layout_above="@+id/image_splash"
         android:textStyle="italic"
         android:text="APPLICATION"
         android:layout_marginBottom="40dp"
@@ -43,7 +45,7 @@
 
     <ImageView
 
-        android:id="@+id/image"
+        android:id="@+id/image_splash"
         android:src="@drawable/icon"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
