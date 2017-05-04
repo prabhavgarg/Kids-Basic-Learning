@@ -1,6 +1,7 @@
 package com.example.boss.learn;
 
 import android.content.Intent;
+import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.TypedValue;
@@ -10,13 +11,16 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
+
+import java.util.Locale;
 
 public class oneTwoThree extends AppCompatActivity {
 
     String numbers[]={"1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20"};
-    String numbers_name[]={"ONE","TWO","THREE","FOUR","FIVE","SIX","SEVEN","EIGHT","NINE","TEN","ELEVEN","TWELVE","THIRTEEN"
+    String numbers_name[]={"one","two","THREE","FOUR","FIVE","six","SEVEN","EIGHT","NINE","ten","ELEVEN","TWELVE","THIRTEEN"
             ,"FOURTEEN","FIFTEEN","SIXTEEN","SEVENTEEN","EIGHTEEN","NINETEEN","TWENTY"};
     int images[]={R.drawable.apple,R.drawable.two,R.drawable.three,R.drawable.four,
             R.drawable.five,R.drawable.six,R.drawable.seven,R.drawable.eight,R.drawable.nine,R.drawable.ten,
@@ -41,6 +45,10 @@ public class oneTwoThree extends AppCompatActivity {
             t2.setText(numbers_name[pageNumber]);
             imageView.setImageResource(images[pageNumber]);
         }
+        if(MainActivity.toSpeech!=null)
+        {
+            MainActivity.toSpeech.stop();
+        }
     }
 
     public void onClickNext(View view)
@@ -53,6 +61,10 @@ public class oneTwoThree extends AppCompatActivity {
             t1.setText(numbers[pageNumber]);
             t2.setText(numbers_name[pageNumber]);
             imageView.setImageResource(images[pageNumber]);
+        }
+        if(MainActivity.toSpeech!=null)
+        {
+            MainActivity.toSpeech.stop();
         }
     }
 
@@ -75,5 +87,19 @@ public class oneTwoThree extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
+    public void onPlay(View view)
+    {
+        switch (view.getId())
+        {
+            case R.id.play:
+                if(MainActivity.result==TextToSpeech.LANG_MISSING_DATA||MainActivity.result==TextToSpeech.LANG_NOT_SUPPORTED)
+                {
+                    Toast.makeText(getApplicationContext(),"Feature not support in your device",Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    MainActivity.toSpeech.speak(numbers_name[pageNumber],TextToSpeech.QUEUE_FLUSH,null);
+                }
+                break;
+        }
+    }
 }

@@ -34,6 +34,7 @@
     </LinearLayout>
 
     <TextView
+        android:textAllCaps="true"
         android:id="@+id/alphabet_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -50,6 +51,7 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/back"
             android:onClick="onClickPrevious"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -58,9 +60,21 @@
             android:textColor="#ffffff"
             android:textSize="20dp"
             android:background="#4CAF50"
-            android:text="PREVIOUS" />
+            android:text="BACK" />
+        <Button
+            android:id="@+id/play"
+            android:onClick="onPlay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:background="#4CAF50"
+            android:text="PLAY" />
 
         <Button
+            android:id="@+id/next"
             android:onClick="onClickNext"
             android:layout_width="0dp"
             android:layout_height="match_parent"

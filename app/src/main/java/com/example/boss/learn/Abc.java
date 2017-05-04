@@ -1,6 +1,8 @@
 package com.example.boss.learn;
 
 import android.content.Intent;
+import android.speech.tts.TextToSpeech;
+import android.support.annotation.RawRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,14 +11,19 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
+
+import java.util.Locale;
 
 public class Abc extends AppCompatActivity {
 
     String alphabets[]={"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
-    String alphabet_name[]={"APPLE","BALL","CAT","DOG","EGG","FISH","GUN","HORSE","IRON","JUG","KITE","LION","MONKEY"
-            ,"NOSE","ORANGE","PARROT","QUEEN","RAT","SUN","TREE","UNICORN","VAN","WHEEL","X-RAY","YAK","ZEBRA"};
+    String alphabet_name[]={"APPLE","BALL","cat","dog","egg","FISH","gun","HORSE","IRON","jug","KITE","LION","MONKEY"
+            ,"NOSE","ORANGE","PARROT","QUEEN","rat","sun","TREE","UNICORN","van","WHEEL","X-ray","yak","ZEBRA"};
+    String alphabet_name1[]={"APPLE","BALL","cat","dog","egg","FISH","gun","HORSE","IRON","jug","KITE","LION","MONKEY"
+            ,"NOSE","ORANGE","PARROT","QUEEN","rat","sun","TREE","UNICORN","van","WHEEL","X ray","yak","ZEBRA"};
     int images[]={R.drawable.apple,R.drawable.ball,R.drawable.cat,R.drawable.dog,
             R.drawable.egg,R.drawable.fish,R.drawable.gun,R.drawable.horse,R.drawable.iron,R.drawable.jug,
             R.drawable.kite,R.drawable.lion,R.drawable.monkey,R.drawable.nose,R.drawable.orange,R.drawable.parrot,
@@ -39,6 +46,10 @@ public class Abc extends AppCompatActivity {
             t1.setText(alphabets[pageNumber]);
             t2.setText(alphabet_name[pageNumber]);
             imageView.setImageResource(images[pageNumber]);
+            if(MainActivity.toSpeech!=null)
+            {
+                MainActivity.toSpeech.stop();
+            }
         }
     }
 
@@ -52,6 +63,10 @@ public class Abc extends AppCompatActivity {
             t1.setText(alphabets[pageNumber]);
             t2.setText(alphabet_name[pageNumber]);
             imageView.setImageResource(images[pageNumber]);
+            if(MainActivity.toSpeech!=null)
+            {
+                MainActivity.toSpeech.stop();
+            }
         }
     }
     @Override
@@ -74,4 +89,19 @@ public class Abc extends AppCompatActivity {
         }
     }
 
+    public void onPlay(View view)
+    {
+        switch (view.getId())
+        {
+            case R.id.play:
+                if(MainActivity.result==TextToSpeech.LANG_MISSING_DATA||MainActivity.result==TextToSpeech.LANG_NOT_SUPPORTED)
+                {
+                    Toast.makeText(getApplicationContext(),"Feature not support in your device",Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    MainActivity.toSpeech.speak(alphabet_name1[pageNumber],TextToSpeech.QUEUE_FLUSH,null);
+                }
+                break;
+        }
+    }
 }

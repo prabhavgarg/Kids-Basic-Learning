@@ -2,6 +2,7 @@ package com.example.boss.learn;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
@@ -10,13 +11,31 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
+    static TextToSpeech toSpeech;
+    static int result;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        toSpeech = new TextToSpeech(this,new TextToSpeech.OnInitListener(){
+            public void onInit(int status)
+            {
+                if(status==TextToSpeech.SUCCESS)
+                {
+                    result=toSpeech.setLanguage(Locale.UK);
+                }
+                else
+                {
+                    Toast.makeText(getApplicationContext(),"Feature not support in your device",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 
     public void openAbc(View view) {

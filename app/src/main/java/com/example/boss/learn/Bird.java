@@ -1,6 +1,7 @@
 package com.example.boss.learn;
 
 import android.content.Intent;
+import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,12 +10,15 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
+import java.util.Locale;
+
 public class Bird extends AppCompatActivity {
 
-    String shape_name[]={"PARROT","PENGUIN","OWL","CRANE","CUCKOOS","TOUCAN","SPARROW","KINGFISHER","STORK","SWALLOW",
+    String shape_name[]={"PARROT","PENGUIN","owl","CRANE","CUCKOOS","TOUCAN","SPARROW","KINGFISHER","STORK","SWALLOW",
             "SWIFT","KIWIS","FOWL","OSTRICH"};
     int images[]={R.drawable.parrott,R.drawable.penguin,R.drawable.owl,R.drawable.crane,
             R.drawable.cuckoos,R.drawable.toucan,R.drawable.sparrow,R.drawable.kingfisher,R.drawable.stork,R.drawable.swallow,
@@ -35,6 +39,10 @@ public class Bird extends AppCompatActivity {
             t2.setText(shape_name[pageNumber]);
             imageView.setImageResource(images[pageNumber]);
         }
+        if(MainActivity.toSpeech!=null)
+        {
+            MainActivity.toSpeech.stop();
+        }
     }
 
     public void onClickNext(View view)
@@ -45,6 +53,10 @@ public class Bird extends AppCompatActivity {
             pageNumber++;
             t2.setText(shape_name[pageNumber]);
             imageView.setImageResource(images[pageNumber]);
+        }
+        if(MainActivity.toSpeech!=null)
+        {
+            MainActivity.toSpeech.stop();
         }
     }
     @Override
@@ -67,4 +79,19 @@ public class Bird extends AppCompatActivity {
         }
     }
 
+    public void onPlay(View view)
+    {
+        switch (view.getId())
+        {
+            case R.id.play:
+                if(MainActivity.result==TextToSpeech.LANG_MISSING_DATA||MainActivity.result==TextToSpeech.LANG_NOT_SUPPORTED)
+                {
+                    Toast.makeText(getApplicationContext(),"Feature not support in your device",Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    MainActivity.toSpeech.speak(shape_name[pageNumber],TextToSpeech.QUEUE_FLUSH,null);
+                }
+                break;
+        }
+    }
 }

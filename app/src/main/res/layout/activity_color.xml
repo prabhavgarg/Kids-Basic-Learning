@@ -18,6 +18,7 @@
         android:layout_weight="2"/>
 
     <TextView
+        android:textAllCaps="true"
         android:layout_weight="1"
         android:id="@+id/alphabet_name"
         android:layout_width="match_parent"
@@ -34,20 +35,43 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/back"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_margin="30dp"
+            android:layout_marginTop="33dp"
+            android:layout_marginBottom="33dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:layout_weight="1"
             android:background="#4CAF50"
             android:onClick="onClickPrevious"
-            android:text="PREVIOUS"
+            android:text="BACK"
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
+        <Button
+            android:id="@+id/play"
+            android:onClick="onPlay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="33dp"
+            android:layout_marginBottom="33dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:background="#4CAF50"
+            android:text="PLAY"
             android:textColor="#ffffff"
             android:textSize="20dp" />
 
+
         <Button
+            android:id="@+id/next"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_margin="30dp"
+            android:layout_marginTop="33dp"
+            android:layout_marginBottom="33dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:layout_weight="1"
             android:background="#4CAF50"
             android:onClick="onClickNext"
