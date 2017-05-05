@@ -29,6 +29,7 @@ public class Fruit extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fruit);
+        MainActivity.toSpeech.speak(shape_name[pageNumber],TextToSpeech.QUEUE_FLUSH,null);
     }
 
     public void onClickPrevious(View view) {
@@ -42,6 +43,7 @@ public class Fruit extends AppCompatActivity {
         if (MainActivity.toSpeech != null) {
             MainActivity.toSpeech.stop();
         }
+        MainActivity.toSpeech.speak(shape_name[pageNumber],TextToSpeech.QUEUE_FLUSH,null);
     }
 
     public void onClickNext(View view) {
@@ -55,6 +57,7 @@ public class Fruit extends AppCompatActivity {
         if (MainActivity.toSpeech != null) {
             MainActivity.toSpeech.stop();
         }
+        MainActivity.toSpeech.speak(shape_name[pageNumber],TextToSpeech.QUEUE_FLUSH,null);
     }
 
     @Override

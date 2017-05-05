@@ -28,6 +28,7 @@ public class Shape extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shape);
+        MainActivity.toSpeech.speak(shape_name[pageNumber],TextToSpeech.QUEUE_FLUSH,null);
     }
 
     public void onClickPrevious(View view)
@@ -42,6 +43,7 @@ public class Shape extends AppCompatActivity {
             {
                 MainActivity.toSpeech.stop();
             }
+            MainActivity.toSpeech.speak(shape_name[pageNumber],TextToSpeech.QUEUE_FLUSH,null);
         }
     }
 
@@ -57,6 +59,7 @@ public class Shape extends AppCompatActivity {
             {
                 MainActivity.toSpeech.stop();
             }
+            MainActivity.toSpeech.speak(shape_name[pageNumber],TextToSpeech.QUEUE_FLUSH,null);
         }
     }
 

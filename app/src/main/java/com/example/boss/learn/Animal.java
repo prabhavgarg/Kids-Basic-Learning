@@ -30,6 +30,7 @@ public class Animal extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_animal);
+        MainActivity.toSpeech.speak(shape_name[pageNumber],TextToSpeech.QUEUE_FLUSH,null);
     }
 
     public void onClickPrevious(View view)
@@ -45,6 +46,7 @@ public class Animal extends AppCompatActivity {
         {
             MainActivity.toSpeech.stop();
         }
+        MainActivity.toSpeech.speak(shape_name[pageNumber],TextToSpeech.QUEUE_FLUSH,null);
     }
 
     public void onClickNext(View view)
@@ -60,6 +62,7 @@ public class Animal extends AppCompatActivity {
         {
             MainActivity.toSpeech.stop();
         }
+        MainActivity.toSpeech.speak(shape_name[pageNumber],TextToSpeech.QUEUE_FLUSH,null);
     }
 
     @Override

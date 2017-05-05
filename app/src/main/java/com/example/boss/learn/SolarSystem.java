@@ -18,7 +18,7 @@ import java.util.Locale;
 
 public class SolarSystem extends AppCompatActivity {
 
-    String shape_name[]={"SUN","MERCURY","VENUS","EARTH","MARS","JUPITER","SATURN","URANUS","NEPTUNE"};
+    String shape_name[]={"sun","MERCURY","VENUS","EARTH","MARS","JUPITER","SATURN","URANUS","NEPTUNE"};
     int images[]={R.drawable.sunn,R.drawable.mercury,R.drawable.vinus,R.drawable.earth,
             R.drawable.mars,R.drawable.jupiter,R.drawable.saturn,R.drawable.uranus,R.drawable.nuptune};
     int pageNumber=0;
@@ -26,6 +26,7 @@ public class SolarSystem extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_solar_system);
+        MainActivity.toSpeech.speak(shape_name[pageNumber],TextToSpeech.QUEUE_FLUSH,null);
     }
 
     public void onClickPrevious(View view)
@@ -41,6 +42,7 @@ public class SolarSystem extends AppCompatActivity {
         {
             MainActivity.toSpeech.stop();
         }
+        MainActivity.toSpeech.speak(shape_name[pageNumber],TextToSpeech.QUEUE_FLUSH,null);
     }
 
     public void onClickNext(View view)
@@ -56,6 +58,7 @@ public class SolarSystem extends AppCompatActivity {
         {
             MainActivity.toSpeech.stop();
         }
+        MainActivity.toSpeech.speak(shape_name[pageNumber],TextToSpeech.QUEUE_FLUSH,null);
     }
 
     @Override

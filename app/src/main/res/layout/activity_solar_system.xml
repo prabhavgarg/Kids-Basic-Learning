@@ -19,7 +19,6 @@
 
     <TextView
         android:textAllCaps="true"
-
         android:layout_weight="1"
         android:id="@+id/alphabet_name"
         android:layout_width="match_parent"

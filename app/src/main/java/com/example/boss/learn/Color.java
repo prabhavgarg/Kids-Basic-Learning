@@ -27,6 +27,7 @@ public class Color extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_color);
+        MainActivity.toSpeech.speak(shape_name[pageNumber],TextToSpeech.QUEUE_FLUSH,null);
     }
 
     public void onClickPrevious(View view)
@@ -42,6 +43,7 @@ public class Color extends AppCompatActivity {
         {
             MainActivity.toSpeech.stop();
         }
+        MainActivity.toSpeech.speak(shape_name[pageNumber],TextToSpeech.QUEUE_FLUSH,null);
     }
 
     public void onClickNext(View view)
@@ -57,6 +59,7 @@ public class Color extends AppCompatActivity {
         {
             MainActivity.toSpeech.stop();
         }
+        MainActivity.toSpeech.speak(shape_name[pageNumber],TextToSpeech.QUEUE_FLUSH,null);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

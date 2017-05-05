@@ -34,6 +34,7 @@ public class Abc extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_abc);
+        MainActivity.toSpeech.speak(alphabet_name1[pageNumber],TextToSpeech.QUEUE_FLUSH,null);
     }
 
     public void onClickPrevious(View view)
@@ -50,6 +51,7 @@ public class Abc extends AppCompatActivity {
             {
                 MainActivity.toSpeech.stop();
             }
+            MainActivity.toSpeech.speak(alphabet_name1[pageNumber],TextToSpeech.QUEUE_FLUSH,null);
         }
     }
 
@@ -67,6 +69,7 @@ public class Abc extends AppCompatActivity {
             {
                 MainActivity.toSpeech.stop();
             }
+            MainActivity.toSpeech.speak(alphabet_name1[pageNumber],TextToSpeech.QUEUE_FLUSH,null);
         }
     }
     @Override

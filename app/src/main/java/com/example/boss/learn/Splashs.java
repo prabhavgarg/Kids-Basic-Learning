@@ -39,9 +39,8 @@ public class Splashs extends AppCompatActivity {
         RelativeLayout l=(RelativeLayout) findViewById(R.id.relativelayout);
         l.clearAnimation();
         l.startAnimation(anim);
-
         anim = AnimationUtils.loadAnimation(this, R.anim.translate);
-        anim.reset();
+       anim.reset();
         TextView t1 = (TextView)findViewById(R.id.textView1);
         TextView t2 = (TextView)findViewById(R.id.textView2);
         TextView t3 = (TextView)findViewById(R.id.textView3);
@@ -68,10 +67,10 @@ public class Splashs extends AppCompatActivity {
                         sleep(100);
                         waited += 100;
                     }
-                    Intent intent = new Intent(Splashs.this,
-                            MainActivity.class);
+                    Intent intent = new Intent(Splashs.this,MainActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                     startActivity(intent);
+                    overridePendingTransition(R.anim.from_middle, R.anim.in_middle);
                     Splashs.this.finish();
                 } catch (InterruptedException e) {
                     // do nothing
@@ -82,7 +81,6 @@ public class Splashs extends AppCompatActivity {
             }
         };
         splashTread.start();
-
     }
 
 }
