@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.boss.learn">
+    package="com.prabhav.learn">
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/icon"
-        android:label="SKILLS FOR KIDS"
+        android:label="KIDS BASIC LEARNING"
         android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -20,7 +20,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:label="SKILLS FOR KIDS"
+            android:label="KIDS BASIC LEARNINGS"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Abc"
@@ -118,7 +118,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-        <activity android:name=".TestPapers" />
+        <activity
+            android:name=".TestPapers"
+            android:label="TESTING SKILLS"
+            android:screenOrientation="portrait">
+        </activity>
     </application>
 
 </manifest>

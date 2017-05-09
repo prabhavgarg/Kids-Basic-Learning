@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/relativelayout"
@@ -13,8 +14,8 @@
         android:textColor="@android:color/background_dark"
         android:fontFamily="serif"
         android:textSize="35dp"
+        android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
-        android:layout_above="@+id/textView2"
         android:textStyle="italic"
         android:text="KIDS"
         android:layout_width="wrap_content"
@@ -24,35 +25,33 @@
         android:textColor="@android:color/background_dark"
         android:fontFamily="serif"
         android:textSize="35dp"
-        android:layout_above="@+id/textView3"
-        android:layout_centerHorizontal="true"
         android:textStyle="italic"
-        android:text="LEARNING"
+        android:text="BASIC"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true" />
     <TextView
         android:id="@+id/textView3"
         android:textColor="@android:color/background_dark"
         android:fontFamily="serif"
         android:textSize="35dp"
-        android:layout_centerHorizontal="true"
-        android:layout_above="@+id/image_splash"
         android:textStyle="italic"
-        android:text="APPLICATION"
-        android:layout_marginBottom="40dp"
+        android:text="LEARNING"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true" />
 
     <ImageView
-
+        android:layout_marginTop="150dp"
         android:id="@+id/image_splash"
-        android:src="@drawable/icon"
+        android:scaleType="fitCenter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/textView4"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="35dp" />
+        android:src="@drawable/iconc"
+        android:layout_marginBottom="20dp"
+        android:layout_above="@+id/textView4" />
 
     <TextView
         android:textColor="@android:color/background_dark"

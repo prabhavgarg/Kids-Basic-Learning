@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#ffffff"
-    tools:context="com.example.boss.learn.Developer">
+    tools:context="com.prabhav.boss.learn.Developer">
 
     <ImageView
         android:layout_marginTop="40dp"

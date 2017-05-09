@@ -1,4 +1,4 @@
-package com.example.boss.learn;
+package com.prabhav.boss.learn;
 
 import org.junit.Test;
 

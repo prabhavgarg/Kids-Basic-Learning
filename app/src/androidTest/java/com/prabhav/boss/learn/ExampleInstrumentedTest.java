@@ -1,4 +1,4 @@
-package com.example.boss.learn;
+package com.prabhav.boss.learn;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

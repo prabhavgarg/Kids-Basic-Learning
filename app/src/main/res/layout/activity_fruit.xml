@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#ffffff"
     android:orientation="vertical"
-    tools:context="com.example.boss.learn.Abc">
+    tools:context="com.prabhav.boss.learn.Abc">
 
 
     <ImageView
