@@ -3,8 +3,8 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
-    <string name="test_note">This is an objective exam to see how much you have learned so far. Please do not leave the test before
-        completing it, otherwise you will get zero marks. It will contain 30 objective questions. Press the button to start the test.
+    <string name="test_note">This is an objective exam to see how much you have learned so far. Please do not leave the test before you
+        complete it, otherwise you will get any marks. It will contain 30 objective questions. Press the button to start the test.
     </string>
     <string name="q_1">Q1. Write the name of Animal.</string>
     <string name="q_2">Q2. Write the name of Animal.</string>

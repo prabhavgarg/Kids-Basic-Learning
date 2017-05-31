@@ -1,69 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/relativelayout"
+    android:id="@+id/layout"
     android:visibility="visible"
     android:background="#E8F5E9"
     android:orientation="vertical">
-
     <TextView
+        android:layout_marginTop="15dp"
+        android:layout_weight="1"
         android:id="@+id/textView1"
         android:textColor="@android:color/background_dark"
         android:fontFamily="serif"
         android:textSize="35dp"
-        android:layout_marginTop="10dp"
+        android:gravity="center"
         android:layout_centerHorizontal="true"
         android:textStyle="italic"
         android:text="KIDS"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
     <TextView
+        android:layout_weight="1"
         android:id="@+id/textView2"
         android:textColor="@android:color/background_dark"
+        android:gravity="center"
         android:fontFamily="serif"
         android:textSize="35dp"
         android:textStyle="italic"
         android:text="BASIC"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_below="@+id/textView1"
         android:layout_centerHorizontal="true" />
     <TextView
+        android:layout_weight="1"
         android:id="@+id/textView3"
         android:textColor="@android:color/background_dark"
         android:fontFamily="serif"
         android:textSize="35dp"
+        android:gravity="center"
         android:textStyle="italic"
         android:text="LEARNING"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_below="@+id/textView2"
         android:layout_centerHorizontal="true" />
 
     <ImageView
-        android:layout_marginTop="150dp"
+        android:layout_marginBottom="15dp"
+        android:layout_weight="10"
         android:id="@+id/image_splash"
         android:scaleType="fitCenter"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:src="@drawable/iconc"
-        android:layout_marginBottom="20dp"
         android:layout_above="@+id/textView4" />
 
-    <TextView
-        android:textColor="@android:color/background_dark"
-        android:fontFamily="cursive"
-        android:textSize="35dp"
-        android:layout_marginBottom="15dp"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:textStyle="italic"
-        android:text="Developed By: Prabhav Garg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView4" />
 
-</RelativeLayout>
+</LinearLayout>
